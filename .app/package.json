@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@fontsource-variable/fira-code": "^5.0.16",
+    "@fontsource-variable/inter": "^5.0.16",
+    "@fontsource-variable/karla": "^5.0.19",
+    "@types/chroma-js": "^2.4.3",
+    "nuxt": "3.11.2",
+    "chroma-js": "^2.4.2"
+  },
+  "scripts": {
+    "prepare": "nuxt prepare",
+    "dev": "nuxt dev --open",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "typecheck": "nuxt typecheck",
+    "clean": "rimraf .nuxt .output node_modules"
+  }
+}
