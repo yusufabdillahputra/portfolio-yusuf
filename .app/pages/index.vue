@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Yusuf Abdillah Putra',
+  title: null,
 })
 </script>
 

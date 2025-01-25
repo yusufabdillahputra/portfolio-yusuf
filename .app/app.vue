@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { switchColorShades } from '~/utils/bundles/colors-switcher'
+import colors from "tailwindcss/colors";
+
+
 const route = useRoute()
 const app = useAppConfig()
 
@@ -44,6 +48,10 @@ useHead({
       content: '630',
     },
   ],
+})
+onNuxtReady(() => {
+  switchColorShades('primary', colors.sky)
+  switchColorShades('muted', colors.slate)
 })
 </script>
 

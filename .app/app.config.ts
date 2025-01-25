@@ -42,14 +42,6 @@ export default defineAppConfig({
             icon: {name: 'ph:suitcase-simple', class: 'w-6 h-6'},
             click: () => {}
           },
-          {
-            name: 'Color',
-            icon: {name: 'ph:drop-half-bottom-duotone', class: 'w-6 h-6'},
-            click: () => {
-              const isSwitcherOpen = useState('switcher-open', () => false)
-              isSwitcherOpen.value = true
-            },
-          },
         ],
       },
       toolbar: {
@@ -57,8 +49,11 @@ export default defineAppConfig({
         showTitle: true,
         tools: [
           {
-            component: 'ThemeToggle',
+            component: 'ToolbarColor',
           },
+          {
+            component: 'ThemeToggle',
+          }
         ],
       },
       footer: {
