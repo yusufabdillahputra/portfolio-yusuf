@@ -6,9 +6,12 @@
     "@fontsource-variable/fira-code": "^5.0.16",
     "@fontsource-variable/inter": "^5.0.16",
     "@fontsource-variable/karla": "^5.0.19",
+    "@nuxt/image": "1.9.0",
     "@types/chroma-js": "^2.4.3",
+    "chroma-js": "^2.4.2",
     "nuxt": "3.11.2",
-    "chroma-js": "^2.4.2"
+    "date-fns": "3.6.0",
+    "std-env": "3.7.0"
   },
   "scripts": {
     "prepare": "nuxt prepare",

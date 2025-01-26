@@ -1,6 +1,8 @@
 export default defineNuxtConfig({
   ssr: false,
-  devtools: { enabled: true },
+  devtools: {enabled: true},
+  compatibilityDate: '2025-01-26',
+
   extends: [
     '../layers/tairo-layout-iconnav',
     '../layers/tairo',
@@ -16,12 +18,14 @@ export default defineNuxtConfig({
     '@fontsource-variable/inter/index.css',
     '@fontsource-variable/karla/index.css',
   ],
+
   experimental: {
     // Render tags in of the head in a more performant way
     headNext: true,
     // Use the new View Transitions API
     viewTransition: true,
   },
+
   typescript: {
     tsConfig: {
       // Here you can customize the generated tsconfig.json file
@@ -30,6 +34,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   nitro: {
     esbuild: {
       options: {
@@ -37,15 +42,21 @@ export default defineNuxtConfig({
       },
     },
   },
+
   vite: {
     define: {
       // Enable / disable Options API support. Disabling this will result in smaller bundles,
       // but may affect compatibility with 3rd party libraries if they rely on Options API.
       // Splitplane uses Options API, so we need to enable it.
-      '__VUE_OPTIONS_API__': true,
+      __VUE_OPTIONS_API__: true,
     },
     build: {
       target: 'esnext',
+    },
+    server: {
+      hmr: {
+        clientPort: import.meta.env.PORT,
+      },
     },
     // Defining the optimizeDeps.include option prebuilds the dependencies, this avoid
     // some reloads when navigating between pages during development.
@@ -110,4 +121,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  modules: ['@nuxt/image'],
 })

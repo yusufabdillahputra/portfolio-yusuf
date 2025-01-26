@@ -1,7 +1,7 @@
 export default defineAppConfig({
   nuxtIcon: {},
   tairo: {
-    title: 'Yusuf Abdillah Putra Portfolio',
+    title: 'YAP Portfolio',
     error: {
       logo: {
         component: 'img',
@@ -19,28 +19,38 @@ export default defineAppConfig({
         enabled: true,
         logo: {
           component: 'TairoLogo',
-          props: {class: 'text-primary-600 h-10 w-10'},
+          props: {
+            class: 'text-primary-600 h-10 w-10',
+          },
         },
         items: [
           {
             name: 'About',
-            icon: {name: 'ph:identification-badge', class: 'w-6 h-6'},
-            click: () => {}
+            icon: {
+              name: 'ph:identification-badge', class: 'w-6 h-6',
+            },
+            click: () => {
+            },
           },
           {
             name: 'Skills',
-            icon: {name: 'ph:list-star-fill', class: 'w-6 h-6'},
-            click: () => {}
+            icon: {
+              name: 'ph:list-star-fill', class: 'w-6 h-6',
+            },
+            click: () => {
+            },
           },
           {
             name: 'Projects',
-            icon: {name: 'ph:coffee', class: 'w-6 h-6'},
-            click: () => {}
+            icon: { name: 'ph:coffee', class: 'w-6 h-6' },
+            click: () => {
+            },
           },
           {
             name: 'Experiences',
-            icon: {name: 'ph:suitcase-simple', class: 'w-6 h-6'},
-            click: () => {}
+            icon: { name: 'ph:suitcase-simple', class: 'w-6 h-6' },
+            click: () => {
+            },
           },
         ],
       },
@@ -53,14 +63,14 @@ export default defineAppConfig({
           },
           {
             component: 'ThemeToggle',
-          }
+          },
         ],
       },
       footer: {
         enabled: true,
         logoSeparator: {
           component: 'TairoLogo',
-          props: {class: 'text-primary-500 h-7 w-7'},
+          props: { class: 'text-primary-500 h-7 w-7' },
         },
         logo: {
           component: 'TairoLogoText',
