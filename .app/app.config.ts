@@ -1,3 +1,5 @@
+import slugify from "slugify";
+
 export default defineAppConfig({
   nuxtIcon: {},
   tairo: {
@@ -29,28 +31,32 @@ export default defineAppConfig({
             icon: {
               name: 'ph:identification-badge', class: 'w-6 h-6',
             },
-            click: () => {
-            },
+            activePath: '/about/',
+            to: '/about',
           },
           {
             name: 'Skills',
             icon: {
               name: 'ph:list-star-fill', class: 'w-6 h-6',
             },
-            click: () => {
-            },
+            activePath: '/skills/',
+            to: '/skills',
           },
           {
             name: 'Projects',
-            icon: { name: 'ph:coffee', class: 'w-6 h-6' },
-            click: () => {
+            icon: {
+              name: 'ph:coffee', class: 'w-6 h-6',
             },
+            activePath: '/projects/',
+            to: '/projects',
           },
           {
             name: 'Experiences',
-            icon: { name: 'ph:suitcase-simple', class: 'w-6 h-6' },
-            click: () => {
+            icon: {
+              name: 'ph:suitcase-simple', class: 'w-6 h-6',
             },
+            activePath: '/experiences/',
+            to: '/experiences',
           },
         ],
       },
@@ -70,7 +76,7 @@ export default defineAppConfig({
         enabled: true,
         logoSeparator: {
           component: 'TairoLogo',
-          props: { class: 'text-primary-500 h-7 w-7' },
+          props: {class: 'text-primary-500 h-7 w-7'},
         },
         logo: {
           component: 'TairoLogoText',

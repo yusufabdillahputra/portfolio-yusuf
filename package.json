@@ -14,7 +14,8 @@
     "layers/*"
   ],
   "scripts": {
-    "dev": "pnpm --filter=app dev",
+    "kill-port": "lsof -ti :3000 | xargs kill -9 || true",
+    "dev": "pnpm kill-port && pnpm --filter=app dev",
     "build": "pnpm --filter=app build",
     "generate": "pnpm --filter=app generate",
     "demo:dev": "pnpm --filter=demo dev",

@@ -53,11 +53,6 @@ export default defineNuxtConfig({
     build: {
       target: 'esnext',
     },
-    server: {
-      hmr: {
-        clientPort: import.meta.env.PORT,
-      },
-    },
     // Defining the optimizeDeps.include option prebuilds the dependencies, this avoid
     // some reloads when navigating between pages during development.
     // It's also useful to track them usage.

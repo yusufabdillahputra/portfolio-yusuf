@@ -1,27 +1,35 @@
 <script setup lang="ts">
 definePageMeta({
   title: null,
+  scrollToTop: true,
 })
 </script>
 
 <template>
-  <div>
-    <BasePlaceholderPage
-        title="Coming Soon"
-        subtitle="Still development."
+  <div class="flex w-full flex-col items-center justify-center">
+    <BaseHeading
+      as="h2"
+      size="4xl"
+      weight="extrabold"
+      class="text-muted-800 dark:text-white"
     >
-      <template #image>
-        <img
-            class="block dark:hidden"
-            src="/img/illustrations/placeholders/flat/placeholder-having-coffee.svg"
-            alt="Please wait"
-        />
-        <img
-            class="hidden dark:block"
-            src="/img/illustrations/placeholders/flat/placeholder-having-coffee-dark.svg"
-            alt="Please wait"
-        />
-      </template>
-    </BasePlaceholderPage>
+      Hi, I'm Yusuf Abdillah Putra
+    </BaseHeading>
+    <BaseHeading
+      as="h2"
+      size="4xl"
+      weight="extrabold"
+      class="text-muted-800 dark:text-white"
+    >
+      But you can call me Yusuf
+    </BaseHeading>
+    <BaseParagraph
+      as="p"
+      size="md"
+      weight="bold"
+      class="text-muted-800 dark:text-white"
+    >
+      I'm a Fullstack Developer
+    </BaseParagraph>
   </div>
 </template>

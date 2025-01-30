@@ -10,8 +10,7 @@
     "@types/chroma-js": "^2.4.3",
     "chroma-js": "^2.4.2",
     "nuxt": "3.11.2",
-    "date-fns": "3.6.0",
-    "std-env": "3.7.0"
+    "date-fns": "3.6.0"
   },
   "scripts": {
     "prepare": "nuxt prepare",
