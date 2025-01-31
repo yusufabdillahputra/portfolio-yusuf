@@ -5,7 +5,11 @@ import {useLocaleLanguage} from "~/stores/locale";
 const {setLocale} = useI18n()
 const store = useLocaleLanguage()
 onMounted(() => {
-  setLocale('en')
+  if (store.localeEn) {
+    setLocale('en')
+  } else {
+    setLocale('id')
+  }
 })
 watch(store, (value) => {
   if (value.localeEn) {
