@@ -65,6 +65,9 @@ export default defineAppConfig({
         showTitle: true,
         tools: [
           {
+            component: 'LocaleToggle',
+          },
+          {
             component: 'ToolbarColor',
           },
           {

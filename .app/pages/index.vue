@@ -13,7 +13,7 @@ definePageMeta({
       weight="extrabold"
       class="text-muted-800 dark:text-white"
     >
-      Hi, I'm Yusuf Abdillah Putra
+      {{ $t('heading1') }}
     </BaseHeading>
     <BaseHeading
       as="h2"
@@ -21,7 +21,7 @@ definePageMeta({
       weight="extrabold"
       class="text-muted-800 dark:text-white"
     >
-      But you can call me Yusuf
+      {{ $t('heading2') }}
     </BaseHeading>
     <BaseParagraph
       as="p"
@@ -29,7 +29,7 @@ definePageMeta({
       weight="bold"
       class="text-muted-800 dark:text-white"
     >
-      I'm a Fullstack Developer
+      {{ $t('heading3') }}
     </BaseParagraph>
   </div>
 </template>

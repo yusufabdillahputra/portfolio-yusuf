@@ -11,7 +11,8 @@
   },
   "workspaces": [
     ".app",
-    "layers/*"
+    "layers/tairo",
+    "layers/tairo-layout-iconnav"
   ],
   "scripts": {
     "kill-port": "lsof -ti :3000 | xargs kill -9 || true",

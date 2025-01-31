@@ -3,11 +3,17 @@ definePageMeta({
   title: 'About',
 })
 
-
 </script>
 
 <template>
   <div>
+    <BaseHeading
+      as="h2"
+      size="xl"
+      weight="light"
+    >
+      About
+    </BaseHeading>
     <BasePlaceholderPage
       title="Coming Soon"
       subtitle="Still development."

@@ -1,7 +1,14 @@
 export default defineNuxtConfig({
   ssr: false,
-  devtools: {enabled: true},
-  compatibilityDate: '2025-01-26',
+
+  devtools: {
+    enabled: true,
+  },
+
+  devServer: {
+    host: 'localhost',
+    port: 3000,
+  },
 
   extends: [
     '../layers/tairo-layout-iconnav',
@@ -50,6 +57,14 @@ export default defineNuxtConfig({
       // Splitplane uses Options API, so we need to enable it.
       __VUE_OPTIONS_API__: true,
     },
+    server: {
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost',
+        port: 3000,
+        clientPort: 3000,
+      },
+    },
     build: {
       target: 'esnext',
     },
@@ -57,65 +72,30 @@ export default defineNuxtConfig({
     // some reloads when navigating between pages during development.
     // It's also useful to track them usage.
     optimizeDeps: {
-      include: [
-        // '@headlessui-float/vue',
-        // 'scule',
-        // 'klona',
-        // '@vueform/slider',
-        // 'v-calendar',
-
-        // AddonCarouselIcon
-        // AddonCarouselTeam
-        // 'vue3-carousel',
-
-        // AddonApexcharts
-        // 'vue3-apexcharts',
-
-        // AddonInputPhone
-        // 'libphonenumber-js/max',
-        // 'country-codes-list',
-
-        // AddonInputPassword
-        // '@zxcvbn-ts/core',
-        // '@zxcvbn-ts/language-common',
-        // '@zxcvbn-ts/language-en',
-        // '@zxcvbn-ts/language-fr',
-
-        // AddonMarkdownRemark
-        // 'rehype-external-links',
-        // 'rehype-raw',
-        // 'rehype-sanitize',
-        // 'rehype-stringify',
-        // '@shikijs/rehype',
-        // 'remark-gfm',
-        // 'remark-parse',
-        // 'remark-rehype',
-        // 'unified',
-
-        // useMultiStepForm
-        // 'vue3-smooth-dnd',
-        // 'splitpanes',
-        // 'mapbox-gl',
-        // '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.min.js',
-
-        // DocComponentMeta
-        // useDocumentationMeta
-        // 'scule',
-
-        // form validation
-        // '@vee-validate/zod',
-        // 'vee-validate',
-        // 'zod',
-
-        // calendar app
-        // 'date-fns',
-        // 'date-fns/locale',
-
-        // profile edit page
-        // 'imask',
-      ],
+      include: [],
     },
   },
 
-  modules: ['@nuxt/image'],
+  modules: [
+    '@nuxt/image',
+    '@nuxtjs/i18n',
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
+  ],
+
+  pinia: {
+    storesDirs: [
+      './stores/**',
+    ],
+  },
+
+  piniaPluginPersistedstate: {
+    storage: 'localStorage',
+  },
+
+  i18n: {
+    vueI18n: './.app/i18n.config.ts',
+  },
+
+  compatibilityDate: '2025-01-31',
 })
