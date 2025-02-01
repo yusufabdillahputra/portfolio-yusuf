@@ -2,21 +2,24 @@
 import {useLocaleLanguage} from "~/stores/locale";
 
 
-const {setLocale} = useI18n()
+const {setLocale, availableLocales} = useI18n()
 const store = useLocaleLanguage()
-onMounted(() => {
-  if (store.localeEn) {
-    setLocale('en')
+const initLocale = (localEn: boolean): void => {
+  if (localEn) {
+    if (availableLocales.includes('en')) {
+      setLocale('en')
+    }
   } else {
-    setLocale('id')
+    if (availableLocales.includes('id')) {
+      setLocale('id')
+    }
   }
+}
+onMounted(() => {
+  initLocale(store.localeEn)
 })
 watch(store, (value) => {
-  if (value.localeEn) {
-    setLocale('en')
-  } else {
-    setLocale('id')
-  }
+  initLocale(value.localeEn)
 })
 </script>
 
