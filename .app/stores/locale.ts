@@ -2,7 +2,7 @@ import type {LocaleLanguage} from '~/types/locale';
 
 export const useLocaleLanguage = defineStore('localeLanguage', {
   state: (): LocaleLanguage => ({
-    localeEn: true,
+    localeId: true,
   }),
   persist: true,
 })

@@ -3,8 +3,8 @@ import id from '~/locale/id.json'
 
 export default defineI18nConfig(() => ({
   legacy: false,
-  fallbackLocale: 'en',
-  locale: 'en',
+  fallbackLocale: ['id', 'en'],
+  locale: 'id',
   messages: {
     "en": en,
     "id": id,

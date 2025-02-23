@@ -1,5 +1,9 @@
 {
-  "heroHeading": "Hi, saya",
-  "heroName": "Yusuf Abdillah Putra",
-  "heroParagraph": "Namun kamu bisa memanggilku Yusuf, Saya seorang Fullstack Developer"
+  "&": "dan",
+  "hero": {
+    "name": "Yusuf Abdillah Putra",
+    "p1": "Hi, nama saya",
+    "p2": "Saya membangun apapun yang berhubungan dengan sistem aplikasi",
+    "p3": "Saya seorang software engineer spesialis yang membangun segala kebutuhan aplikasi web, Sekarang, saya sedang fokus membangun aplikasi corporate pada"
+  }
 }

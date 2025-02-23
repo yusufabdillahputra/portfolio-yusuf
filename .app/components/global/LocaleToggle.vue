@@ -4,41 +4,44 @@ import {useLocaleLanguage} from "~/stores/locale";
 
 const {setLocale, availableLocales} = useI18n()
 const store = useLocaleLanguage()
-const initLocale = (localEn: boolean): void => {
-  if (localEn) {
-    if (availableLocales.includes('en')) {
-      setLocale('en')
-    }
-  } else {
+const {
+  localeId
+} = storeToRefs(store)
+const initLocale = (localId: boolean): void => {
+  if (localId) {
     if (availableLocales.includes('id')) {
       setLocale('id')
+    }
+  } else {
+    if (availableLocales.includes('en')) {
+      setLocale('en')
     }
   }
 }
 onMounted(() => {
-  initLocale(store.localeEn)
+  initLocale(localeId.value)
 })
 watch(store, (value) => {
-  initLocale(value.localeEn)
+  initLocale(value.localeId)
 })
 </script>
 
 <template>
   <label class="nui-theme-toggle">
     <input
-      v-model="store.localeEn"
+      v-model="localeId"
       type="checkbox"
       class="nui-theme-toggle-input"
     />
     <div class="nui-theme-toggle-inner">
       <div class="flex justify-center m-1.5">
-        <div v-if="store.localeEn">
+        <div v-if="localeId">
           <BaseParagraph
             as="p"
             weight="light"
             size="sm"
           >
-            en
+            id
           </BaseParagraph>
         </div>
         <div v-else>
@@ -47,7 +50,7 @@ watch(store, (value) => {
             weight="light"
             size="sm"
           >
-            id
+            en
           </BaseParagraph>
         </div>
       </div>

@@ -1,3 +1,3 @@
 export interface LocaleLanguage {
-  localeEn: boolean
+  localeId: boolean
 }

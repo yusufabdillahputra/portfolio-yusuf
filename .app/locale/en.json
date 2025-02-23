@@ -1,5 +1,9 @@
 {
-  "heroHeading": "Hi, I'm",
-  "heroName": "Yusuf Abdillah Putra",
-  "heroParagraph": "But you can call me Yusuf, I'm a Fullstack Developer"
+  "&": "and",
+  "hero": {
+    "name": "Yusuf Abdillah Putra",
+    "p1": "Hi, my name is",
+    "p2": "I build anything related to application systems",
+    "p3": "I am a specialist software engineer who builds all web application needs. Currently, I am focused on building corporate applications for"
+  }
 }
