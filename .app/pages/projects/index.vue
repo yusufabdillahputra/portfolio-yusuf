@@ -2,12 +2,12 @@
 definePageMeta({
   title: 'Projects',
 })
-
-
 </script>
 
 <template>
-  <div>
+  <TairoContentWrapper
+    class="pt-20"
+  >
     <BasePlaceholderPage
       title="Coming Soon"
       subtitle="Still development."
@@ -25,5 +25,5 @@ definePageMeta({
         >
       </template>
     </BasePlaceholderPage>
-  </div>
+  </TairoContentWrapper>
 </template>
